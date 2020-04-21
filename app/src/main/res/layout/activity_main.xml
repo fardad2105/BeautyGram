@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:layoutDirection="rtl">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/main_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="ltr"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_marginTop="-85dp">
+        <com.example.beautygram.views.CurvedBottomNavigationView
+            android:id="@+id/main_bottomBar"
+            app:menu="@menu/main_bottom_bar_menu"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layoutDirection="ltr"
+            android:elevation="5dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="33dp"
+            app:itemIconTint="@android:color/black" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_fab"
+            app:elevation="7dp"
+            android:layout_gravity="center|top"
+            app:backgroundTint="@color/colorAccentDark"
+            app:srcCompat="@drawable/ic_add" />
+    </FrameLayout>
+
+</LinearLayout>
